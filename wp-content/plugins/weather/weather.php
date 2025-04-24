@@ -59,7 +59,7 @@ function handle_weather_search() {
 add_shortcode('weather_search_box', function () {
     ob_start(); ?>
     <div id="weather-search">
-        <input type="text" id="weather-city" placeholder="Enter city name" />
+        <input type="text" id="weather-city" placeholder="Enter city or address name" />
         <button id="get-weather">Search</button>
         <div id="weather-result"></div>
     </div>
