@@ -1,0 +1,8 @@
+#weather-search {
+    border: 2px solid #0073aa;
+    padding: 20px;
+    max-width: 400px;
+    background: #f7f7f7;
+    font-family: Arial, sans-serif;
+}
+#get-weather{background-color: #fff!important;padding:10px!important;}
