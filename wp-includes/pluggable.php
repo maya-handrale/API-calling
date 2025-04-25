@@ -2280,7 +2280,7 @@ if ( ! function_exists( 'wp_new_user_notification' ) ) :
 		 *
 		 * @see https://core.trac.wordpress.org/tickets/42957
 		 */
-		$message .= network_site_url( 'wp-login.php?login=' . rawurlencode( $user->user_login ) . "&key=$key&action=rp", 'login' ) . "\r\n\r\n";
+		$message .= network_site_url( 'site-login.php?login=' . rawurlencode( $user->user_login ) . "&key=$key&action=rp", 'login' ) . "\r\n\r\n";
 
 		$message .= wp_login_url() . "\r\n";
 

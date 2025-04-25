@@ -4182,10 +4182,10 @@ const external_wp_i18n_namespaceObject = window["wp"]["i18n"];
  * Function returning a sessionStorage key to set or retrieve a given post's
  * automatic session backup.
  *
- * Keys are crucially prefixed with 'wp-autosave-' so that wp-login.php's
+ * Keys are crucially prefixed with 'wp-autosave-' so that site-login.php's
  * `loggedout` handler can clear sessionStorage of any user-private content.
  *
- * @see https://github.com/WordPress/wordpress-develop/blob/6dad32d2aed47e6c0cf2aee8410645f6d7aba6bd/src/wp-login.php#L103
+ * @see https://github.com/WordPress/wordpress-develop/blob/6dad32d2aed47e6c0cf2aee8410645f6d7aba6bd/src/site-login.php#L103
  *
  * @param {string}  postId    Post ID.
  * @param {boolean} isPostNew Whether post new.

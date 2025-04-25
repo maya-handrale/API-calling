@@ -1175,7 +1175,7 @@ function wp_is_recovery_mode() {
  */
 function is_protected_endpoint() {
 	// Protect login pages.
-	if ( isset( $GLOBALS['pagenow'] ) && 'wp-login.php' === $GLOBALS['pagenow'] ) {
+	if ( isset( $GLOBALS['pagenow'] ) && 'site-login.php' === $GLOBALS['pagenow'] ) {
 		return true;
 	}
 
@@ -2020,7 +2020,7 @@ function wp_is_site_protected_by_basic_auth( $context = '' ) {
 	global $pagenow;
 
 	if ( ! $context ) {
-		if ( 'wp-login.php' === $pagenow ) {
+		if ( 'site-login.php' === $pagenow ) {
 			$context = 'login';
 		} elseif ( is_admin() ) {
 			$context = 'admin';

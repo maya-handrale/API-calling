@@ -138,7 +138,7 @@ function determine_locale() {
 	}
 
 	if (
-		isset( $GLOBALS['pagenow'] ) && 'wp-login.php' === $GLOBALS['pagenow'] &&
+		isset( $GLOBALS['pagenow'] ) && 'site-login.php' === $GLOBALS['pagenow'] &&
 		( ! empty( $_GET['wp_lang'] ) || ! empty( $_COOKIE['wp_lang'] ) )
 	) {
 		if ( ! empty( $_GET['wp_lang'] ) ) {

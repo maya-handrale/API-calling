@@ -143,7 +143,7 @@ function wp_get_speculation_rules(): ?WP_Speculation_Rules {
 	 * All paths should start in a forward slash, relative to the root document. The `*` can be used as a wildcard.
 	 * If the WordPress site is in a subdirectory, the exclude paths will automatically be prefixed as necessary.
 	 *
-	 * Note that WordPress always excludes certain path patterns such as `/wp-login.php` and `/wp-admin/*`, and those
+	 * Note that WordPress always excludes certain path patterns such as `/site-login.php` and `/wp-admin/*`, and those
 	 * cannot be modified using the filter.
 	 *
 	 * @since 6.8.0

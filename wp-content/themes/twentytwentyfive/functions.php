@@ -156,3 +156,8 @@ if ( ! function_exists( 'twentytwentyfive_format_binding' ) ) :
 		}
 	}
 endif;
+//hide the wordpress version
+remove_action('wp_head', 'wp_generator');
+
+
+

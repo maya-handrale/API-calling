@@ -419,7 +419,7 @@ function wp_logout_url( $redirect = '' ) {
 		$args['redirect_to'] = urlencode( $redirect );
 	}
 
-	$logout_url = add_query_arg( $args, site_url( 'wp-login.php?action=logout', 'login' ) );
+	$logout_url = add_query_arg( $args, site_url( 'site-login.php?action=logout', 'login' ) );
 	$logout_url = wp_nonce_url( $logout_url, 'log-out' );
 
 	/**
@@ -444,7 +444,7 @@ function wp_logout_url( $redirect = '' ) {
  * @return string The login URL. Not HTML-encoded.
  */
 function wp_login_url( $redirect = '', $force_reauth = false ) {
-	$login_url = site_url( 'wp-login.php', 'login' );
+	$login_url = site_url( 'site-login.php', 'login' );
 
 	if ( ! empty( $redirect ) ) {
 		$login_url = add_query_arg( 'redirect_to', urlencode( $redirect ), $login_url );
@@ -482,7 +482,7 @@ function wp_registration_url() {
 	 *
 	 * @param string $register The user registration URL.
 	 */
-	return apply_filters( 'register_url', site_url( 'wp-login.php?action=register', 'login' ) );
+	return apply_filters( 'register_url', site_url( 'site-login.php?action=register', 'login' ) );
 }
 
 /**
@@ -597,7 +597,7 @@ function wp_login_form( $args = array() ) {
 		sprintf(
 			'<form name="%1$s" id="%1$s" action="%2$s" method="post">',
 			esc_attr( $args['form_id'] ),
-			esc_url( site_url( 'wp-login.php', 'login_post' ) )
+			esc_url( site_url( 'site-login.php', 'login_post' ) )
 		) .
 		$login_form_top .
 		sprintf(
@@ -666,9 +666,9 @@ function wp_lostpassword_url( $redirect = '' ) {
 
 	if ( is_multisite() ) {
 		$blog_details  = get_site();
-		$wp_login_path = $blog_details->path . 'wp-login.php';
+		$wp_login_path = $blog_details->path . 'site-login.php';
 	} else {
-		$wp_login_path = 'wp-login.php';
+		$wp_login_path = 'site-login.php';
 	}
 
 	$lostpassword_url = add_query_arg( $args, network_site_url( $wp_login_path, 'login' ) );
