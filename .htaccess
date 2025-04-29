@@ -147,10 +147,6 @@
 <IfModule mod_headers.c>
     Header set Referrer-Policy "no-referrer-when-downgrade"
 </IfModule>
-<Files xmlrpc.php>
-    Order deny,allow
-    Deny from all
-</Files>
 # END W3TC Browser Cache
 # BEGIN WordPress
 # The directives (lines) between "BEGIN WordPress" and "END WordPress" are
